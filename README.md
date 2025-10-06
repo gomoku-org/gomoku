@@ -28,7 +28,7 @@ Spelare kan ange sina namn, välja spelpjäser och spela på en interaktiv spelp
 
 **Klona repot**
 ```bash
-git clone https://github.com/tic-tac-toe-frk24s/frk24s-frontend.git
+git clone https://github.com/gomoku-org/gomoku-Application.git
 cd frk24s-frontend
 npm install
 npm run dev
