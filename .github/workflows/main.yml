@@ -1,22 +1,12 @@
 name: Deploy
-on:
-  push:
-    branches: [ "main" ]
-
+on: push
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Fail early if secret missing
-        if: ${{ secrets.DISCORD_WEBHOOK == '' }}
-        run: |
-          echo "❌ DISCORD_WEBHOOK saknas eller är tom."
-          exit 1
-
-      - name: Send message (appleboy)
-        if: ${{ secrets.DISCORD_WEBHOOK != '' }}
-        uses: appleboy/discord-action@v1.2.0
-        with:
-          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
-          message: "🚀 ${{ github.repository }} has been successfully deployed by ${{ github.actor }}."
-
+    - name: discord
+      uses: sebastianpopp/discord-action@releases/v2
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        message: ${{ github.repository }} has been successfullly deployed.
