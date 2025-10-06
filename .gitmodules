@@ -7,6 +7,5 @@
     url = https://github.com/gomoku-org/gomoku-backend.git
     branch = main
 [submodule "application"]
-    path = application
-    url = https://github.com/gomoku-org/gomoku-Application.git
-    branch = main
+	path = application
+	url = https://github.com/gomoku-org/gomoku-Application.git
